@@ -1,0 +1,38 @@
+{
+  "nodes": [
+    {
+      "name": "Set Name",
+      "type": "Set",
+      "parameters": {
+        "values": {"name": "Alice"}
+      }
+    },
+    {
+      "name": "If Name Check",
+      "type": "If",
+      "parameters": {
+        "condition": {
+          "value1": "name",
+          "operation": "equal",
+          "value2": "Alice"
+        }
+      }
+    },
+    {
+      "name": "Delay Node",
+      "type": "Delay",
+      "parameters": {
+        "delay": 2,
+        "unit": "seconds"
+      }
+    },
+    {
+      "name": "Send Slack Message",
+      "type": "Slack",
+      "parameters": {
+        "webhookUrl": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL",
+        "message": "Hello, Alice!"
+      }
+    }
+  ]
+}
